@@ -27,7 +27,7 @@ To get a local copy up and running follow these simple example steps.
 ### Setup
 
 ```bash
-git clone https://github.com/usmansbk/repo_name.git
+git clone https://github.com/gordonotieno/repo_name.git
 cd ./repo_name
 ```
 
