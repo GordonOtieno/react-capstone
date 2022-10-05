@@ -1,21 +1,21 @@
-.Home-banner {
+.home-sec-banner {
   padding: 24px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
 
-.Home-banner-right {
+.home-sec-banner-right {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.Home-stats {
+.home-sec-stats {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.Home-grid {
+.home-sec-grid {
   display: grid;
   gap: 1px;
   grid-template-columns: repeat(2, 1fr);
@@ -23,16 +23,16 @@
   list-style-type: none;
 }
 
-.Home-grid-item:hover {
+.home-sec-grid-item:hover {
   opacity: 0.5;
 }
 
-.Home-grid-item:nth-child(4n + 2),
-.Home-grid-item:nth-child(4n + 3){
+.home-sec-grid-item:nth-child(4n + 2),
+.home-sec-grid-item:nth-child(4n + 3) {
   background-color: rgba(0, 0, 0, 0.08);
 }
 
-.Home-item-content {
+.home-sec-item-content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -41,24 +41,24 @@
   height: 100%;
 }
 
-.Home-item-top {
+.home-sec-item-top {
   padding: 8px 16px;
   display: flex;
 }
 
-.Home-item-bottom {
+.home-sec-item-bottom {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 16px;
 }
 
-.Home-item-image {
+.home-sec-item-image {
   width: 100px;
   filter: brightness(50%) grayscale(50%) opacity(0.5);
 }
 
-.Home-item-icon {
+.home-sec-item-icon {
   position: absolute;
   right: 4px;
   top: 4px;

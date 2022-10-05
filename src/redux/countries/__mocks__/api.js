@@ -1,24 +1,24 @@
 export const getCountries = async () => Promise.resolve({
   Testing1: {
     All: {
-      confirmed: 5,
-      country: 'Testing1',
+      confirmed: 10,
+      country: 'Test1',
     },
   },
   Testing2: {
     All: {
-      confirmed: 8,
-      country: 'Testing2',
+      confirmed: 20,
+      country: 'Test2',
     },
   },
 });
 
 export const getCountry = async () => Promise.resolve({
   All: {
-    confirmed: 3,
+    confirmed: 30,
     country: 'All',
   },
   Testing3: {
-    confirmed: 4,
+    confirmed: 20,
   },
 });

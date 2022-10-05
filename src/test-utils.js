@@ -2,7 +2,7 @@
 import React from 'react';
 import { render as rtlRender } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import { loadingBarReducer } from 'react-redux-loading-bar';
 import thunk from 'redux-thunk';
 import countriesReducer from './redux/countries/countries';
@@ -12,10 +12,10 @@ const reducer = combineReducers({
   loadingBar: loadingBarReducer,
 });
 
-const store = createStore(
+const store = configureStore({
   reducer,
-  applyMiddleware(thunk),
-);
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
+});
 
 function render(
   ui,

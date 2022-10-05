@@ -7,17 +7,17 @@ import Icon from '../Icon';
 import formatNumber from '../../redux/formatNumber';
 import './Home.css';
 import virus from '../../assets/virus.svg';
-import map from '../../assets/europe.png';
+import world from '../../assets/europe.png';
 
 const Item = ({ confirmed, name }) => (
-  <div className="Home-item-content">
-    <div className="Home-item-icon">
+  <div className="home-sec-item-content">
+    <div className="home-sec-item-icon">
       <Icon name="arrow_circle_right" />
     </div>
-    <div className="Home-item-top">
-      <img src={virus} alt="" className="Home-item-image" />
+    <div className="home-sec-item-top">
+      <img src={virus} alt="" className="home-sec-item-image" />
     </div>
-    <div className="Home-item-bottom">
+    <div className="home-sec-item-bottom">
       <h4 className="App-title">{name}</h4>
       <p className="App-subtitle">{formatNumber(confirmed)}</p>
     </div>
@@ -25,9 +25,9 @@ const Item = ({ confirmed, name }) => (
 );
 
 const Grid = ({ items = [] }) => (
-  <ul className="Home-grid">
+  <ul className="home-sec-grid">
     {items.map(({ name, confirmed }) => (
-      <li key={name} className="Home-grid-item">
+      <li key={name} className="home-sec-grid-item">
         <Link to={`/country/${name}`}>
           <Item confirmed={confirmed} name={name} />
         </Link>
@@ -66,16 +66,16 @@ const Home = () => {
           <Icon name="settings" />
         </div>
       </header>
-      <div className="Home-banner">
-        <div className="Home-banner-left">
-          <img src={map} alt="" className="App-map" />
+      <div className="home-sec-banner">
+        <div className="home-sec-banner-left">
+          <img src={world} alt="" className="App-map" />
         </div>
-        <div className="Home-banner-right">
+        <div className="home-sec-banner-right">
           <h1 className="App-title">{continent}</h1>
           <p className="App-subtitle">{`${formatNumber(totalConfirmed)} cases`}</p>
         </div>
       </div>
-      <section className="Home-stats">
+      <section className="home-sec-stats">
         <h5 className="App-section-title">STATS BY COUNTRY</h5>
         <Grid items={items} />
       </section>
