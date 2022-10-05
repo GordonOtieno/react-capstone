@@ -24,9 +24,9 @@ export const fetchCountry = (name) => async (dispatch) => {
 
 export const fetchCountries = (continent) => async (dispatch) => {
   dispatch(showLoading());
-  const map = await getCountries(continent);
+  const oneContinent = await getCountries(continent);
 
-  const data = Object.values(map).reduce((accumulator, currentValue) => {
+  const data = Object.values(oneContinent).reduce((accumulator, currentValue) => {
     const { All: { country, confirmed } } = currentValue;
 
     accumulator.items.push({ name: country, confirmed });

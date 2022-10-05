@@ -37,7 +37,7 @@ const Grid = ({ items = [] }) => (
 );
 
 const Home = () => {
-  const continent = 'Europe';
+  const Selectedcontinent = 'Asia';
 
   const dispatch = useDispatch();
   const { items, totalConfirmed, loading } = useSelector((state) => ({
@@ -47,7 +47,7 @@ const Home = () => {
 
   useEffect(() => {
     if (!items.length) {
-      dispatch(fetchCountries(continent));
+      dispatch(fetchCountries(Selectedcontinent));
     }
   }, [dispatch, items.length]);
 
@@ -71,7 +71,7 @@ const Home = () => {
           <img src={world} alt="" className="App-map" />
         </div>
         <div className="home-sec-banner-right">
-          <h1 className="App-title">{continent}</h1>
+          <h1 className="title">{Selectedcontinent}</h1>
           <p className="App-subtitle">{`${formatNumber(totalConfirmed)} cases`}</p>
         </div>
       </div>
