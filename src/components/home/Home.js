@@ -42,7 +42,7 @@ const Home = () => {
     ...state.countries,
     loading: state.loadingBar.default,
   }));
-  const [continent, setContinent] = useState('');
+  const [continent, setContinent] = useState('Asia');
 
   const changeContinent = (e) => {
     setContinent(e.target.value);
