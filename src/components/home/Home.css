@@ -67,6 +67,7 @@
 .title {
   font-weight: 700;
 }
+
 .select-continent {
   color: black;
   outline: none;
@@ -75,6 +76,7 @@
   border-radius: 3px;
   margin-right: 5px;
 }
+
 option {
   color: black;
   padding: 5px;
