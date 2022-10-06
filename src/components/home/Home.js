@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchCountries } from '../../redux/countries/countries';
@@ -37,19 +37,25 @@ const Grid = ({ items = [] }) => (
 );
 
 const Home = () => {
-  const Selectedcontinent = 'Asia';
-
   const dispatch = useDispatch();
   const { items, totalConfirmed, loading } = useSelector((state) => ({
     ...state.countries,
     loading: state.loadingBar.default,
   }));
+  const [continent, setContinent] = useState('');
+
+  const changeContinent = (e) => {
+    setContinent(e.target.value);
+    dispatch(fetchCountries(continent));
+  };
+  // const Selectedcontinent = 'Antarctica';
 
   useEffect(() => {
     if (!items.length) {
-      dispatch(fetchCountries(Selectedcontinent));
+      // dispatch(fetchCountries(Selectedcontinent));
+      dispatch(fetchCountries(continent));
     }
-  }, [dispatch, items.length]);
+  }, [dispatch, items.length, continent]);
 
   if (loading) {
     return null;
@@ -61,6 +67,17 @@ const Home = () => {
         <Icon name="arrow_back_ios" />
         <h4>2022</h4>
         <h5 className="App-header-title">confirmed cases</h5>
+
+        <select name="continents" value={continent} id="continent" className="select-continent" onChange={changeContinent}>
+          <option value="">--Select Another Continent----</option>
+          <option value="Europe">Europe</option>
+          <option value="Africa">Africa</option>
+          <option value="North America">North America</option>
+          <option value="South America">South America</option>
+          <option value="Antarctica">Antarctica</option>
+          <option value="Australia">Australia</option>
+        </select>
+
         <Icon name="mic" />
         <div className="pl-5">
           <Icon name="settings" />
@@ -71,7 +88,7 @@ const Home = () => {
           <img src={world} alt="" className="App-map" />
         </div>
         <div className="home-sec-banner-right">
-          <h1 className="title">{Selectedcontinent}</h1>
+          <h1 className="title">{continent}</h1>
           <p className="App-subtitle">{`${formatNumber(totalConfirmed)} cases`}</p>
         </div>
       </div>

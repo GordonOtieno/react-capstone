@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://covidnowtracker.netlify.app)
+[comming soon](https://covidnowtracker.netlify.app)
 
 ## Getting Started
 
