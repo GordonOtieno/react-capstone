@@ -45,8 +45,9 @@ const Home = () => {
   const [continent, setContinent] = useState('Asia');
 
   const changeContinent = (e) => {
+    const search = e.target.value;
     setContinent(e.target.value);
-    dispatch(fetchCountries(continent));
+    dispatch(fetchCountries(search));
   };
   // const Selectedcontinent = 'Antarctica';
 
