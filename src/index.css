@@ -1,27 +1,66 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import "https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round";
+
+* {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  color: white;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+body {
+  background-color: #eb4c89;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pl-5 {
+  padding-left: 16px;
+}
+
+.App-loading-bar {
+  background-color: white;
+  position: absolute;
+  height: 3px;
+}
+
+.App-header {
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.06);
+  padding: 0 4px;
+}
+
+.App-header-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.title {
+  font-family: GillSansBold, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.App-subtitle {
+  font-family: GillSans, sans-serif;
+}
+
+.App-section-title {
+  font-size: 14px;
+  padding: 4px 8px;
+}
+
+.App-map {
+  width: 100%;
+  filter: brightness(40%) opacity(0.5);
 }

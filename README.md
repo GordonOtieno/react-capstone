@@ -3,10 +3,11 @@
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
 
 > Covid-19 Tracker
+- This is an a application that displays Covid-19 information from different data sources in a particular continent. It's build from covid19 API
 
-![screenshot]()
+![screenshot](./public/Screenshot.png)
 
-This application displays Covid-19 information from different data sources.
+
 
 ## Built With
 
@@ -14,7 +15,7 @@ This application displays Covid-19 information from different data sources.
 
 ## Live Demo
 
-[Live Demo Link](https://covidnowtracker.netlify.app)
+[comming soon](https://covidnowtracker.netlify.app)
 
 ## Getting Started
 
